@@ -7,12 +7,12 @@ body {
   body ul li {
     list-style: none;
     margin: 0; }
-  @media (max-width: 640px) {
+  @media (max-width: 550px) {
     body .containe {
       width: 70%; }
       body .containe .pc {
         display: none; } }
-  @media (min-width: 641px) {
+  @media (min-width: 551px) {
     body .container {
       width: 90%; }
       body .container .sp {
@@ -44,7 +44,7 @@ body {
       #header_in .pc_navi .sns_icon .icon_fb {
         margin-right: 10px; }
 
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   #header_in {
     margin-top: 15px; }
     #header_in .pc {
@@ -96,7 +96,7 @@ body {
         padding: 0 15px;
         letter-spacing: 0.08rem; }
 
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   #main {
     padding: 0 10px; }
     #main .new_items .title, #main .popular_items .title {
@@ -140,7 +140,7 @@ body {
           margin: 0 0 3px 0; }
           .guide .guide_body .sendo dl dd img, .guide .guide_body .pay dl dd img {
             display: block; }
-  @media (max-width: 640px) {
+  @media (max-width: 550px) {
     .guide .title {
       display: block;
       margin: 15px auto; }
@@ -242,7 +242,7 @@ body {
         margin: 0;
         font-size: 12px;
         font-size: 1.2rem; }
-  @media (max-width: 640px) {
+  @media (max-width: 550px) {
     #sidebar_area {
       margin: 0; }
       #sidebar_area .about_area .about_body, #sidebar_area .shop_info_area .about_body {
@@ -279,7 +279,7 @@ footer .copy {
   color: #b8b4ac;
   text-align: center;
   letter-spacing: 0.2rem; }
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   footer {
     padding-bottom: 20px; }
     footer .containe {
@@ -389,7 +389,7 @@ footer .copy {
         letter-spacing: 0.08rem;
         background-color: white; }
 
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   .category_banner .pc {
     display: none; }
 
@@ -514,27 +514,33 @@ footer .copy {
       border-right: 1px solid #e2ddd4; }
     .product_wrapper .table_area table .null {
       background-color: white; }
-  .product_wrapper .priceare td {
-    width: 33.333%; }
-  .product_wrapper .priceare .priceare_img {
-    border: none;
-    padding: 0; }
-  .product_wrapper .priceare i {
-    color: #e80f66;
-    font-size: 22px;
-    font-size: 2.2rem;
-    margin-bottom: 0; }
-    .product_wrapper .priceare i span {
-      color: black;
-      font-size: 14px;
-      font-size: 1.4rem; }
+  .product_wrapper .priceare {
+    width: 100%; }
+    .product_wrapper .priceare table {
+      width: 100%; }
+      .product_wrapper .priceare table td i {
+        font-size: 22px;
+        font-size: 2.2rem;
+        color: #e80f66; }
+        .product_wrapper .priceare table td i span {
+          font-size: 14px;
+          font-size: 1.4rem;
+          margin-left: 3px;
+          color: black; }
+      .product_wrapper .priceare table .qunatity_input {
+        border: 1px solid #e8e4da;
+        border-radius: 0; }
+    .product_wrapper .priceare .cart_img img {
+      display: block;
+      margin-left: auto; }
   .product_wrapper .qunatity {
     width: 100%; }
   .product_wrapper .product_details h3 {
     font-size: 16px;
     font-size: 1.6rem;
     color: #887f69;
-    border-bottom: 1px solid #e8e4da; }
+    border-bottom: 1px solid #e8e4da;
+    padding-bottom: 10px; }
   .product_wrapper .product_details h6 {
     font-size: 16px;
     font-size: 1.6rem;
@@ -565,7 +571,7 @@ footer .copy {
       font-size: 12px;
       font-size: 1.2rem; }
 
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   .product_wrapper {
     padding: 12px; }
     .product_wrapper .product_title h3 {
@@ -579,6 +585,18 @@ footer .copy {
       .product_wrapper .product_img_wrapper .product_lists {
         width: 100%; }
         .product_wrapper .product_img_wrapper .product_lists .product_lists_li li {
-          width: calc( ( 100% - 1px) / 5); } }
+          width: calc( ( 100% - 1px) / 5); }
+
+  .priceare {
+    padding: 0; }
+    .priceare table th {
+      padding: 0;
+      width: 50%; }
+    .priceare table td .qunatity_input {
+      padding: 0;
+      margin: 0; }
+    .priceare .cart_img img {
+      display: block;
+      margin: 0 auto 20px; } }
 
 /*# sourceMappingURL=style.css.map */

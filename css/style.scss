@@ -24,7 +24,7 @@ body{
       margin: 0;
     }
   }
-  @media(max-width: 640px){
+  @media(max-width: 550px){
     .containe {
       width: 70%;
     
@@ -34,7 +34,7 @@ body{
     }
     
   }
-  @media(min-width: 641px){
+  @media(min-width: 551px){
     
     .container{
       width: 90%;
@@ -83,7 +83,7 @@ body{
 }
 
 
-@media(max-width: 640px){
+@media(max-width: 550px){
   
   #header_in{
     
@@ -117,7 +117,7 @@ body{
     }
   }
 }
-//#header_in(max-width:640px)
+//#header_in(:550px)
 #main{
   
   .banner{
@@ -168,7 +168,7 @@ body{
   }
   //.mew_items
 }
-@media(max-width: 640px){
+@media(max-width: 550px){
   #main{
     padding: 0 10px;
     .new_items,.popular_items{
@@ -238,7 +238,7 @@ body{
     }
     
   }
-  @media(max-width: 640px){
+  @media(max-width: 550px){
     
     .title {
       display: block;
@@ -264,7 +264,7 @@ body{
       }
     }
   }
-  //(max-width: 640px)
+  //(max-width: 550px)
 }
 //guide
 #sidebar_area{
@@ -396,7 +396,7 @@ body{
       
     }
   }
-  @media(max-width: 640px){
+  @media(max-width: 550px){
     margin: 0;
     .about_area, .shop_info_area{
       .about_body {
@@ -449,7 +449,7 @@ footer{
     text-align: center;
     letter-spacing: 0.2rem;
   }
-  @media(max-width: 640px){
+  @media(max-width: 550px){
     padding-bottom: 20px;
     .containe{
       margin: auto;
@@ -597,7 +597,7 @@ footer{
     }
   }
 }
-@media(max-width: 640px){
+@media(max-width: 550px){
   .category_banner{
       
     .pc{
@@ -692,7 +692,7 @@ footer{
     }
   }
 }
-//(max-width:640px)
+//(:640px)
 .product_wrapper{
   background-color:white;
   padding: 40px 40px 80px 40px;
@@ -775,26 +775,31 @@ footer{
       
   }
   .priceare{
-    
-     
-    td{
-      width:33.333%;
+    width: 100%;
+    table {
+      width: 100%;
+      td {
+        i{
+          @include fontsize(22);
+          color: #e80f66;
+          span {
+              
+            @include fontsize(14);
+            margin-left: 3px;
+            color: black;
+          }
+        }
+      }
+      .qunatity_input {
+        border: 1px solid #e8e4da;
+        border-radius: 0;
+      }
       
     }
-    .priceare_img{
-      border:none;
-      padding:  0;
-    }
-    
-    i{
-      
-      color: #e80f66;
-      @include fontsize(22);
-      margin-bottom: 0;
-      
-      span{
-        color: black;
-        @include fontsize(14);
+    .cart_img{
+      img{
+        display:block;
+        margin-left: auto;
       }
     }
       
@@ -809,6 +814,7 @@ footer{
       @include fontsize(16);
       color:$d_green;
       border-bottom: 1px solid #e8e4da;
+      padding-bottom: 10px;
     }
     h6{
       @include fontsize(16);
@@ -839,6 +845,7 @@ footer{
           border: 1px solid #e8e4da;
           color: $d_green;
           @include fontsize(12);
+          
         }
       }
     }
@@ -846,7 +853,7 @@ footer{
   }
 }    
 // .product_wrapper
-@media(max-width: 640px){
+@media(max-width: 550px){
   .product_wrapper{
     padding: 12px;
     .product_title{
@@ -876,7 +883,27 @@ footer{
     
   }
   // .product_wrapper
-  .table_area{
-    
+ .priceare{
+   padding: 0;
+   table{
+     th{
+       padding: 0;
+       width: 50%;
+     }
+     td{
+       .qunatity_input{
+         padding: 0;
+         margin: 0;
+       }
+     }
+   }
+  // table
+  .cart_img{
+    img{
+      display: block;
+      margin: 0 auto 20px;
+    }
   }
+  
+ }
 }
