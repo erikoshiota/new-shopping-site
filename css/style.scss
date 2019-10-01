@@ -15,7 +15,19 @@ $gary: #b0b0b0;
 $red: #9d1a2d;
 
 body{
-  background-color: $base2;
+  .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align:left;
+  }
+  .owl-theme .owl-dots .owl-dot span{
+    width: 25px;
+    height: 2px;
+    background-color: #aaaaaa;
+    -webkit-backface-visibility: visible;
+  }
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots span {
+    background: #9d1a2d;
+}
+  
   
   
   ul {
@@ -99,6 +111,7 @@ body{
       display:flex;
       justify-content: center;
       margin-top:13px;
+      position: static;
       
       li{
           margin-right: 10px;
@@ -113,6 +126,29 @@ body{
     
     .sp_navi_li{
       display: none;
+      z-index: 1;
+      position: absolute;
+      right: 100px;
+      top: 90px;
+      width: 180px;
+      background-color: white;
+      margin: 0;
+      
+      li{
+        padding: 12px;
+        border-bottom: 1px solid $d_green;
+        &:last-child{
+          border-bottom: none;
+        }
+        a{
+          text-decoration: none;
+          color: $d_green;
+          display: block;
+          &:hover{
+            color: black;
+          }
+        }
+      }
         
     }
   }
@@ -471,14 +507,15 @@ footer{
 ///// ここからlist.html////////////////
 .breadcrumb_area{
   background-color: #e8e4da;
-  padding: 12px;
-  border-radius: 3px;
-  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 2px;
+  margin-bottom: 10px;
 
   .breadcrumb {
     margin-left: 0;
     padding-left: 0;
     margin-bottom: 0;
+    @include fontsize(11);
     
     
   }

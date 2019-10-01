@@ -2,21 +2,28 @@
 html {
   font-size: 62.5%; }
 
-body {
-  background-color: #f9f8f6; }
-  body ul li {
-    list-style: none;
-    margin: 0; }
-  @media (max-width: 550px) {
-    body .containe {
-      width: 70%; }
-      body .containe .pc {
-        display: none; } }
-  @media (min-width: 551px) {
-    body .container {
-      width: 90%; }
-      body .container .sp {
-        display: none; } }
+body .owl-theme .owl-dots, body .owl-theme .owl-nav {
+  text-align: left; }
+body .owl-theme .owl-dots .owl-dot span {
+  width: 25px;
+  height: 2px;
+  background-color: #aaaaaa;
+  -webkit-backface-visibility: visible; }
+body .owl-theme .owl-dots .owl-dot.active span, body .owl-theme .owl-dots span {
+  background: #9d1a2d; }
+body ul li {
+  list-style: none;
+  margin: 0; }
+@media (max-width: 550px) {
+  body .containe {
+    width: 70%; }
+    body .containe .pc {
+      display: none; } }
+@media (min-width: 551px) {
+  body .container {
+    width: 90%; }
+    body .container .sp {
+      display: none; } }
 
 #header_in {
   margin-top: 35px; }
@@ -54,13 +61,32 @@ body {
     #header_in .navi_list {
       display: flex;
       justify-content: center;
-      margin-top: 13px; }
+      margin-top: 13px;
+      position: static; }
       #header_in .navi_list li {
         margin-right: 10px; }
         #header_in .navi_list li:last-child {
           margin-right: 0; }
     #header_in .sp_navi_li {
-      display: none; } }
+      display: none;
+      z-index: 1;
+      position: absolute;
+      right: 100px;
+      top: 90px;
+      width: 180px;
+      background-color: white;
+      margin: 0; }
+      #header_in .sp_navi_li li {
+        padding: 12px;
+        border-bottom: 1px solid #887f69; }
+        #header_in .sp_navi_li li:last-child {
+          border-bottom: none; }
+        #header_in .sp_navi_li li a {
+          text-decoration: none;
+          color: #887f69;
+          display: block; }
+          #header_in .sp_navi_li li a:hover {
+            color: black; } }
 #main .banner {
   margin: 0;
   padding: 0; }
@@ -294,13 +320,15 @@ footer .copy {
 
 .breadcrumb_area {
   background-color: #e8e4da;
-  padding: 12px;
-  border-radius: 3px;
-  margin-bottom: 12px; }
+  padding: 8px;
+  border-radius: 2px;
+  margin-bottom: 10px; }
   .breadcrumb_area .breadcrumb {
     margin-left: 0;
     padding-left: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 11px;
+    font-size: 1.1rem; }
   .breadcrumb_area .breadcrumb li {
     display: inline;
     /*横に並ぶように*/
